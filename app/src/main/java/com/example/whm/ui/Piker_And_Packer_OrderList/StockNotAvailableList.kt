@@ -37,7 +37,6 @@ class StockNotAvailableList : AppCompatActivity() {
         var message=intent.getStringExtra("message")
         message1.setText(message.toString())
         try {
-
             if (jsonArray!=null && jsonArray!=" ") {
                 val array = JSONArray(jsonArray)
             val recyclerview = findViewById<RecyclerView>(R.id.StockRecyclerview)
@@ -60,9 +59,6 @@ class StockNotAvailableList : AppCompatActivity() {
         } catch (e: JSONException) {
             e.printStackTrace()
         }
-
-//        Log.e("RequiredQty", message.toString())
-
     }
 
     private fun StockNotAvaliable(ProductId: String, ProductName: String, AvilQty: String, QtyShip: String, RequiredQty: String) {
